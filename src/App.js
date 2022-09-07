@@ -1,4 +1,5 @@
 import React,{ useEffect } from 'react';
+import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { 
   init,
@@ -10,6 +11,14 @@ import Graph from './components/Graph';
 import ProductInfo from './components/ProductInfo';
 import './App.css';
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: row; 
+`
+const SalesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 function App() {
 
   const dispatch = useDispatch();
@@ -24,7 +33,13 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <ProductInfo />
+      <Container>
+        <ProductInfo />
+        <SalesContainer>
+          <Graph />
+          <Chart />
+        </SalesContainer>
+      </Container>
     </div>
   );
 }

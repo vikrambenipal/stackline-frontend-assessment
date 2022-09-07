@@ -8,11 +8,11 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 300px;
+  height: 100%;
   margin-top: 60px;
   margin-left: 20px;
   padding-top: 40px;
   box-shadow: 2px 2px 10px rgb(0,0,0,0.25);
-  padding-bottom: 400px;
   img { 
     width: 50%;
     align-self: center;
