@@ -4,6 +4,7 @@ import {
   init,
   selectSales
 } from './features/sales/salesSlice';
+import Nav from './components/Nav';
 import Chart from './components/Chart';
 import Graph from './components/Graph';
 import ProductInfo from './components/ProductInfo';
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <Nav />
       <h1>Hello World</h1>
     </div>
   );
