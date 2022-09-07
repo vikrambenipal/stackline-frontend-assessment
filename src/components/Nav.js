@@ -15,7 +15,6 @@ const NavBar = styled.div`
         margin-left: 20px;
     }
 `
-
 const Nav = () => {
   return (
     <NavBar>
