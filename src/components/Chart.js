@@ -6,6 +6,10 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { selectSales } from '../features/sales/salesSlice';
 
+const Th = styled.th`
+  cursor pointer;
+`
+
 const Chart = () => {
 
   const dispatch = useDispatch();
@@ -22,11 +26,11 @@ const Chart = () => {
       <table>
         <tbody>
           <tr>
-            <th onClick={handleSort}>WEEK ENDING</th>
-            <th onClick={handleSort}>RETAIL SALES</th>
-            <th onClick={handleSort}>WHOLESALES</th>
-            <th onClick={handleSort}>UNITS SOLD</th>
-            <th onClick={handleSort}>RETAILER MARGIN</th>
+            <Th onClick={handleSort}>WEEK ENDING</Th>
+            <Th onClick={handleSort}>RETAIL SALES</Th>
+            <Th onClick={handleSort}>WHOLESALES</Th>
+            <Th onClick={handleSort}>UNITS SOLD</Th>
+            <Th onClick={handleSort}>RETAILER MARGIN</Th>
           </tr>
           {sales.map((sale,index) => {
             return (

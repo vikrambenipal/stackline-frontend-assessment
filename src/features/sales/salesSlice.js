@@ -22,7 +22,6 @@ export const salesSlice = createSlice({
             state.productInfo.title = action.payload.title;
         },
         sortRetailSales: (state, action) => {
-            console.log(action.payload)
             let newSales;
             switch(action.payload){
                 case "RETAIL SALES":
@@ -53,8 +52,6 @@ export const salesSlice = createSlice({
                     newSales = state.sales.sort((a,b) => {
                         const fa = a.weekEnding.split('-').join("")
                         const fb = b.weekEnding.split('-').join("")
-                        console.log("HERE")
-                        console.log(fa)
                         return parseInt(fa) - parseInt(fb);
                     })
                     state.sales = newSales;
