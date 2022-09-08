@@ -24,10 +24,6 @@ const Container = styled.div`
     width: 10px;
   }
 `
-const Span = styled.span`
-  display: flex;
-  flex-direction: row;
-`
 const Th = styled.th`
   cursor pointer;
 `

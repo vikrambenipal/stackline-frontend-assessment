@@ -1,9 +1,8 @@
 import React,{ useEffect } from 'react';
 import styled from 'styled-components';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { 
   init,
-  selectSales
 } from './features/sales/salesSlice';
 import Nav from './components/Nav';
 import Chart from './components/Chart';
