@@ -39,7 +39,7 @@ const Graph = () => {
 
   return (
     <Container>
-      <p>Retail Sales</p>
+      <h3>Retail Sales</h3>
       <Line
         data={{
           labels: getWeekEndings(),
