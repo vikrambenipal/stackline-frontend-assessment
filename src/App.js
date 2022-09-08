@@ -14,10 +14,14 @@ import './App.css';
 const Container = styled.div`
   display: flex;
   flex-direction: row; 
+  //justify-content: space-between
+  height: 100%;
+  margin-top: 50px;
 `
 const SalesContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 70%;
 `
 function App() {
 

@@ -5,7 +5,30 @@ import {
 } from '../features/sales/salesSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectSales } from '../features/sales/salesSlice';
+import downArrow from '../down-arrow-svgrepo-com.svg';
 
+const Container = styled.div`
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 15px;
+  th {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  .header {
+    font-weight: bold;
+  }
+  img {
+    width: 10px;
+  }
+`
+const Span = styled.span`
+  display: flex;
+  flex-direction: row;
+`
 const Th = styled.th`
   cursor pointer;
 `
@@ -22,15 +45,15 @@ const Chart = () => {
   console.log(sales)
 
   return (
-    <div>
+    <Container>
       <table>
         <tbody>
           <tr>
-            <Th onClick={handleSort}>WEEK ENDING</Th>
-            <Th onClick={handleSort}>RETAIL SALES</Th>
-            <Th onClick={handleSort}>WHOLESALES</Th>
-            <Th onClick={handleSort}>UNITS SOLD</Th>
-            <Th onClick={handleSort}>RETAILER MARGIN</Th>
+            <Th className="header" onClick={handleSort}>WEEK ENDING</Th>
+            <Th className="header" onClick={handleSort}>RETAIL SALES</Th>
+            <Th className="header" onClick={handleSort}>WHOLESALES</Th>
+            <Th className="header" onClick={handleSort}>UNITS SOLD</Th>
+            <Th className="header" onClick={handleSort}>RETAILER MARGIN</Th>
           </tr>
           {sales.map((sale,index) => {
             return (
@@ -45,7 +68,7 @@ const Chart = () => {
           })}
         </tbody>
       </table>
-    </div>
+    </Container>
   )
 }
 export default Chart;

@@ -9,11 +9,13 @@ import { selectSales } from '../features/sales/salesSlice';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 `
 const Graph = () => {
 
   Chart.register(CategoryScale, LineElement, LinearScale, PointElement);
-  const dispatch = useDispatch();
   const sales = useSelector(selectSales);
 
   const getRetailSales = () => {
@@ -37,7 +39,7 @@ const Graph = () => {
 
   return (
     <Container>
-      <h2>Retail Sales</h2>
+      <p>Retail Sales</p>
       <Line
         data={{
           labels: getWeekEndings(),
