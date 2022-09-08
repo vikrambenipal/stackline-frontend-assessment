@@ -16,33 +16,64 @@ const Graph = () => {
   const dispatch = useDispatch();
   const sales = useSelector(selectSales);
 
+  const getRetailSales = () => {
+    const retailSales = sales.map(sale => {
+      return sale.retailSales;
+    })
+    return retailSales
+  }
+  const getWholesalelSales = () => {
+    const wholesaleSales = sales.map(sale => {
+      return sale.wholesaleSales;
+    })
+    return wholesaleSales;
+  }
+  const getWeekEndings = () => {
+    const weekEndings = sales.map(sale => {
+      return sale.weekEnding;
+    })
+    return weekEndings;
+  }
+
   return (
     <Container>
       <h2>Retail Sales</h2>
       <Line
         data={{
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-          datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+          labels: getWeekEndings(),
+          options: {
+            scales: {
+                xAxis: {
+                    ticks: {
+                        maxTicksLimit: 10
+                    }
+                }
+            }
+        },
+          datasets: [
+            {
+              label: 'Retail Sales',
+              data: getRetailSales(),
+              backgroundColor: [
+                  '#4DAAF3',
+              ],
+              borderColor: [
+                  '#4DAAF3',
+              ],
+              borderWidth: 3
+          },
+          {
+            label: 'Wholesale Sales',
+            data: getWholesalelSales(),
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                '#A1ACC1',
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                '#A1ACC1',
             ],
-            borderWidth: 1
-        }]
+            borderWidth: 3
+        },
+        ]
         }}
         height={400}
         width={600}

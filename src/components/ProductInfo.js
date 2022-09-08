@@ -12,7 +12,8 @@ const Container = styled.div`
   //margin-top: 60px;
   margin-left: 20px;
   padding-top: 40px;
-  box-shadow: 2px 2px 10px rgb(0,0,0,0.25);
+  //box-shadow: 2px 2px 10px rgb(0,0,0,0.25);
+  border: 1px solid black;
   img { 
     width: 50%;
     align-self: center;
