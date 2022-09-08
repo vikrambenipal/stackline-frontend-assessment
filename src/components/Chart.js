@@ -5,7 +5,6 @@ import {
 } from '../features/sales/salesSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectSales } from '../features/sales/salesSlice';
-import downArrow from '../down-arrow-svgrepo-com.svg';
 
 const Container = styled.div`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

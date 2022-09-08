@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Line } from 'react-chartjs-2';
 import {Chart, LineElement, CategoryScale, LinearScale, PointElement} from 'chart.js'; 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectSales } from '../features/sales/salesSlice';
 
 

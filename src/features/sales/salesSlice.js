@@ -56,6 +56,7 @@ export const salesSlice = createSlice({
                     })
                     state.sales = newSales;
                     break;
+                default:
             }
         }
     }

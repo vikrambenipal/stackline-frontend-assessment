@@ -26,13 +26,12 @@ const SalesContainer = styled.div`
 function App() {
 
   const dispatch = useDispatch();
-  const sales = useSelector(selectSales);
 
   useEffect(() => {
     fetch("data.json")
     .then(res => res.json())
     .then(data => dispatch(init(data[0])))
-  },[])
+  })
 
   return (
     <div className="App">

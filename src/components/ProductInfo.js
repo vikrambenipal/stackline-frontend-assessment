@@ -47,12 +47,11 @@ const TagContainer = styled.div`
 
 const ProductInfo = () => {
 
-  const dispatch = useDispatch();
   const productInfo = useSelector(selectProductInfo);
 
   return (
     <Container>
-      <img src={productInfo.image} />
+      <img src={productInfo.image} alt=""/>
       <h1>{productInfo.title}</h1>
       <p className="subtitle">{productInfo.subtitle}</p>
       <TagContainer>
